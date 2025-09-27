@@ -1,20 +1,61 @@
-async function load(){
-  const res = await fetch('leaderboard.json');
-  const data = await res.json();
+let runs = [];
+let sortKey = null;
+let sortAsc = true;
+
+function pct(x){ return (x*100).toFixed(1) + '%'; }
+
+function render(){
   const tbody = document.querySelector('tbody');
-  if (!data || !Array.isArray(data.runs) || data.runs.length===0){
-    tbody.innerHTML = '<tr><td colspan="7">No runs yet. Add a JSONL to /data/runs and rebuild.</td></tr>';
-    return;
-  }
-  tbody.innerHTML = data.runs.map(r => `
+  const q = (document.getElementById('filter')?.value || '').toLowerCase();
+  const view = runs.filter(r =>
+    !q || JSON.stringify(r).toLowerCase().includes(q)
+  );
+  tbody.innerHTML = view.map(r => `
     <tr>
       <td>${r.run_id}</td>
       <td>${r.model ?? '—'}</td>
-      <td title="Mean partial-credit accuracy">${(r.accuracy*100).toFixed(1)}%</td>
-      <td title="Grounding per policy (Per-Item ▶ Domain ▶ RAG)">${(r.grounding*100).toFixed(1)}%</td>
-      <td title="Safety (higher is safer)">${(r.safety*100).toFixed(1)}%</td>
-      <td><b title="Weighted composite">${(r.trust_score*100).toFixed(1)}%</b></td>
+      <td title="Mean partial-credit accuracy">${pct(r.accuracy)}</td>
+      <td title="Per-Item ▶ Domain ▶ RAG">${pct(r.grounding)}</td>
+      <td title="Regex packs (PII/Toxicity/Policy)">${pct(r.safety)}</td>
+      <td title="Weighted composite"><b>${pct(r.trust_score)}</b></td>
       <td>${r.report ? `<a href="${r.report}">Report</a>` : '—'}</td>
-    </tr>`).join('');
+    </tr>
+  `).join('');
 }
+
+function applySort(key){
+  if (sortKey === key) sortAsc = !sortAsc; else { sortKey = key; sortAsc = true; }
+  runs.sort((a,b)=>{
+    const av = a[key], bv = b[key];
+    if (typeof av === 'number' && typeof bv === 'number') return sortAsc ? av-bv : bv-av;
+    return sortAsc ? String(av).localeCompare(String(bv)) : String(bv).localeCompare(String(av));
+  });
+  render();
+}
+
+async function load(){
+  const res = await fetch('leaderboard.json');
+  const data = await res.json();
+  runs = (data && Array.isArray(data.runs)) ? data.runs.slice() : [];
+  render();
+
+  // Click-to-sort
+  const map = {
+    'th-run':'run_id',
+    'th-model':'model',
+    'th-acc':'accuracy',
+    'th-gnd':'grounding',
+    'th-safe':'safety',
+    'th-trust':'trust_score'
+  };
+  Object.entries(map).forEach(([id,key])=>{
+    const th = document.getElementById(id);
+    if (th) th.addEventListener('click', ()=>applySort(key));
+  });
+
+  // Live filter
+  const f = document.getElementById('filter');
+  if (f) f.addEventListener('input', render);
+}
+
 window.addEventListener('DOMContentLoaded', load);
