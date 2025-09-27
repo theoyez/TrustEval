@@ -1,0 +1,19 @@
+{
+  "run_id": "2025-09-27_demo",
+  "citations": [
+    {
+      "item": "q1",
+      "doc_key": "PAPER:vaswani2017",
+      "root": "94fd0bcb831e6e222bd231211c693bcac19d62901a5720d51c08137c42634255",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "item": "q2",
+      "doc_key": "CARD:llama31",
+      "root": "2a87739d6c881f48a75f312a51f2ba196b728088d4a9c39c46fc0ba484670f2e",
+      "title": "Llama 3.1 Model Card (summary)",
+      "url": "https://ai.meta.com/llama/"
+    }
+  ]
+}

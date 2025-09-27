@@ -1,0 +1,3 @@
+{"id": "q1", "model": "demo", "output": "The Transformer was introduced by \"Attention Is All You Need\" (see PAPER:vaswani2017).", "retrieved": ["PAPER:vaswani2017", "URL:https://huggingface.co/docs/transformers"], "meta": {"timestamp": "2025-09-27T14:00:00Z"}}
+{"id": "q2", "model": "demo", "output": "Llama 3.1 supports a 128k token context window (source: CARD:llama31).", "retrieved": ["CARD:llama31", "PAPER:vaswani2017"], "meta": {"timestamp": "2025-09-27T14:00:05Z"}}
+{"id": "q3", "model": "demo", "output": "Common benchmarks include MMLU and GSM8K (ref: https://crfm.stanford.edu/helm).", "retrieved": ["BENCH:mmlu", "URL:https://crfm.stanford.edu/helm"], "meta": {"timestamp": "2025-09-27T14:00:10Z"}}
