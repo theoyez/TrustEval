@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>theoyez.org — TrustEval</title>
+<link rel="stylesheet" href="web/styles.css">
+</head><body>
+<header class="top">
+  <h1>theoyez.org — TrustEval</h1>
+  <nav>
+    <a class="btn" href="web/how-it-works.html">How it works</a>
+    <a class="btn" href="https://github.com/theoyez/trusteval" target="_blank" rel="noopener">GitHub Repo</a>
+    <a class="btn" href="data/reports/2025-09-27_demoA.html">View sample report</a>
+    <a class="btn" href="web/compare.html?left=2025-09-27_demoA&right=2025-09-27_demoB">Compare</a>
+  </nav>
+</header>
+
+<div class="container">
+  <p class="lead">
+    TrustEval scores model outputs for <b>Accuracy</b>, <b>Grounding</b>, and <b>Safety</b>, and combines them into a <b>Trust</b> score.
+    Click a header to sort. Use the filter to find a run or note.
+  </p>
+  <input id="filter" class="input" placeholder="Filter by run id, model, or notes…"/>
+  <table class="table zebra">
+    <thead>
+      <tr>
+        <th id="th-run"   class="sortable" title="Run identifier">Run</th>
+        <th id="th-model" class="sortable" title="Model or system name">Model</th>
+        <th id="th-acc"   class="sortable" title="Partial-credit accuracy">Accuracy ⬍</th>
+        <th id="th-gnd"   class="sortable" title="Per-Item ▶ Domain ▶ RAG policy">Grounding ⬍</th>
+        <th id="th-safe"  class="sortable" title="PII/Toxicity/Policy deductions (higher is safer)">Safety ⬍</th>
+        <th id="th-trust" class="sortable" title="Weighted composite score">Trust ⬍</th>
+        <th title="Open per-run detail report">Report</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script src="web/leaderboard.js"></script>
+</body></html>
