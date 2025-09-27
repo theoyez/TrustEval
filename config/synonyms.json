@@ -1,0 +1,21 @@
+{
+  "ctx": [
+    "context",
+    "context window"
+  ],
+  "tokens": [
+    "token",
+    "toks"
+  ],
+  "mmlu": [
+    "massive multitask language understanding"
+  ],
+  "paper": [
+    "work",
+    "publication"
+  ],
+  "model": [
+    "system",
+    "llm"
+  ]
+}

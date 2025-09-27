@@ -1,0 +1,28 @@
+{
+  "trusted": [
+    "arxiv.org",
+    "doi.org",
+    "paperswithcode.com",
+    "huggingface.co",
+    "ai.google.dev",
+    "openai.com",
+    "anthropic.com",
+    "meta.ai",
+    "deepmind.google",
+    "mistral.ai",
+    "cohere.com",
+    "x.ai",
+    "crfm.stanford.edu",
+    "big-bench.github.io",
+    "mlcommons.org",
+    "nist.gov",
+    "iso.org",
+    "iec.ch",
+    "oecd.ai",
+    "developer.nvidia.com",
+    "pytorch.org",
+    "tensorflow.org",
+    "wikipedia.org",
+    "w3.org"
+  ]
+}
