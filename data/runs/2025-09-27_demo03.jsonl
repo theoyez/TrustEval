@@ -1,0 +1,3 @@
+{"id": "q1", "model": "demo4", "output": "The paper 'Attention is all you need' proposed Transformers.", "retrieved": [], "proof": []}
+{"id": "q2", "model": "demo4", "output": "Llama 3.1 supports a 128k token context window (source: CARD:llama31).", "retrieved": [{"key": "CARD:llama31", "score": 0.6}], "proof": []}
+{"id": "q3", "model": "demo4", "output": "A common benchmark is MMLU.", "retrieved": [{"key": "BENCH:mmlu", "score": 0.5}, {"key": "URL:https://crfm.stanford.edu/helm", "score": 0.5}], "proof": []}

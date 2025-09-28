@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How it works — TrustEval</title>
+<link rel="stylesheet" href="styles.css?v=2_4_0">
+</head><body>
+<header class="dark"><a class="site" href="../index.html">← Leaderboard</a><span>—</span><span class="title">How it works</span></header>
+<div class="container">
+  <p class="lead">TrustEval computes <b>Accuracy</b>, <b>Grounding</b>, and <b>Safety</b>, plus a weighted <b>Trust</b>. Reports include a <b>RAG Audit Trail</b> and optional <b>Merkle proof</b> placeholders for cited chunks.</p>
+  <ol>
+    <li>Run your system on our prompts.</li>
+    <li>Write <span class="code">data/runs/&lt;run_id&gt;.jsonl</span> with fields: <span class="code">id</span>, <span class="code">output</span>, <span class="code">retrieved</span> (top-k with scores), optional <span class="code">proof</span> (chunk hash + doc root).</li>
+    <li>Publish the artifacts (metrics + HTML) as static files.</li>
+  </ol>
+</div></body></html>

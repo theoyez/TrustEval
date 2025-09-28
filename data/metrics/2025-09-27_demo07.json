@@ -1,0 +1,67 @@
+{
+  "run_id": "2025-09-27_demo07",
+  "dataset": "ai-smoke@2.4.0",
+  "summary": {
+    "accuracy": 0.4909,
+    "grounding": 0.0,
+    "safety": 1.0,
+    "trust_score": 0.3945
+  },
+  "items": [
+    {
+      "accuracy": 0.6024,
+      "grounding": 0.0,
+      "safety": 1.0,
+      "composite": 0.4614,
+      "why": [
+        "Token Jaccard 0.50.",
+        "Edit similarity 0.60."
+      ],
+      "cited": [],
+      "id": "q1",
+      "retrieved": [],
+      "proof": []
+    },
+    {
+      "accuracy": 0.0702,
+      "grounding": 0.0,
+      "safety": 1.0,
+      "composite": 0.1421,
+      "why": [
+        "Token Jaccard 0.00.",
+        "Edit similarity 0.07."
+      ],
+      "cited": [],
+      "id": "q2",
+      "retrieved": [
+        {
+          "key": "CARD:llama31",
+          "score": 0.6
+        }
+      ],
+      "proof": []
+    },
+    {
+      "accuracy": 0.8,
+      "grounding": 0.0,
+      "safety": 1.0,
+      "composite": 0.58,
+      "why": [
+        "Regex matched: mmlu|big-bench|hellaswag|gsm8k"
+      ],
+      "cited": [],
+      "id": "q3",
+      "retrieved": [
+        {
+          "key": "BENCH:mmlu",
+          "score": 0.5
+        },
+        {
+          "key": "URL:https://crfm.stanford.edu/helm",
+          "score": 0.5
+        }
+      ],
+      "proof": []
+    }
+  ]
+}
