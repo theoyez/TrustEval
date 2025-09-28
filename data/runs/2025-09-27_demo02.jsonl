@@ -1,3 +1,0 @@
-{"id": "q1", "model": "demo3", "output": "The Attention paper introduced Transformers (randomblog.example)", "retrieved": [{"key": "PAPER:vaswani2017", "score": 0.3}], "proof": []}
-{"id": "q2", "model": "demo3", "output": "Llama 3.1 offers a context window of 32k tokens.", "retrieved": [{"key": "CARD:llama31", "score": 0.6}], "proof": []}
-{"id": "q3", "model": "demo3", "output": "Common benchmarks include MMLU and GSM8K (ref: https://crfm.stanford.edu/helm).", "retrieved": [{"key": "BENCH:mmlu", "score": 0.5}, {"key": "URL:https://crfm.stanford.edu/helm", "score": 0.5}], "proof": []}
