@@ -1,3 +1,0 @@
-{"id": "q1", "model": "demoC", "output": "The Attention paper introduced Transformers (source: randomblog.example).", "retrieved": [{"key": "PAPER:vaswani2017", "score": 0.33, "title": "Attention Is All You Need"}]}
-{"id": "q2", "model": "demoC", "output": "Context window is 32k tokens.", "retrieved": [{"key": "CARD:llama31", "score": 0.6, "title": "Llama 3.1 Model Card"}], "proof": [{"doc": "CARD:llama31", "chunk_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "root": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}]}
-{"id": "q3", "model": "demoC", "output": "A common benchmark is MMLU.", "retrieved": [{"key": "BENCH:mmlu", "score": 0.41, "title": "MMLU"}]}
