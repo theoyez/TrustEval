@@ -1,0 +1,18 @@
+{
+  "run_id": "2025-09-28_core01",
+  "summary": {
+    "accuracy": 0.41,
+    "grounding": 0.306,
+    "safety": 1.0,
+    "trust_score": 0.4378
+  },
+  "model": "model-2",
+  "meta": {
+    "model": "model-2",
+    "dataset": "core@2.3.2",
+    "prompt_cfg": "icl-8shot",
+    "retriever": "hybrid-v3",
+    "date": "2025-09-28",
+    "prov": "warn"
+  }
+}

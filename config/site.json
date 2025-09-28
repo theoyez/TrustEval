@@ -1,0 +1,31 @@
+{
+  "title": "TrustEval-Core",
+  "hero": {
+    "title": "TrustEval Core",
+    "desc": "Transparent evaluation for AI systems \u2014 Accuracy, Grounding, Safety, and a Trust blend."
+  },
+  "show_columns": [
+    "run_id",
+    "model",
+    "accuracy",
+    "grounding",
+    "safety",
+    "trust_score"
+  ],
+  "labels": {
+    "accuracy": "Accuracy",
+    "grounding": "Grounding",
+    "safety": "Safety",
+    "robustness": "Robustness",
+    "bias": "Bias",
+    "calibration": "Calibration",
+    "trust_score": "Trust"
+  },
+  "chips": [
+    "dataset",
+    "prompt_cfg",
+    "retriever",
+    "date",
+    "prov"
+  ]
+}
