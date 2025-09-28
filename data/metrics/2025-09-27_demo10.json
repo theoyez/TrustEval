@@ -1,0 +1,82 @@
+{
+  "run_id": "2025-09-27_demo10",
+  "dataset": "ai-smoke@2.4.2",
+  "summary": {
+    "accuracy": 0.3973,
+    "grounding": 0.1667,
+    "safety": 1.0,
+    "trust_score": 0.3884
+  },
+  "items": [
+    {
+      "accuracy": 0.3218,
+      "grounding": 0.0,
+      "safety": 1.0,
+      "composite": 0.2931,
+      "why": [
+        "Token Jaccard 0.09.",
+        "Edit similarity 0.32."
+      ],
+      "cited": [],
+      "id": "q1",
+      "retrieved": [
+        {
+          "key": "PAPER:vaswani2017",
+          "score": 0.3
+        }
+      ],
+      "proof": []
+    },
+    {
+      "accuracy": 0.0702,
+      "grounding": 0.0,
+      "safety": 1.0,
+      "composite": 0.1421,
+      "why": [
+        "Token Jaccard 0.00.",
+        "Edit similarity 0.07."
+      ],
+      "cited": [],
+      "id": "q2",
+      "retrieved": [
+        {
+          "key": "CARD:llama31",
+          "score": 0.6
+        }
+      ],
+      "proof": [
+        {
+          "doc": "CARD:llama31",
+          "chunk_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "root": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ]
+    },
+    {
+      "accuracy": 0.8,
+      "grounding": 0.5,
+      "safety": 1.0,
+      "composite": 0.73,
+      "why": [
+        "Regex matched: mmlu|big-bench|hellaswag|gsm8k",
+        "Cited a domain-allowed source.",
+        "RAG: citation not in retrieved top-k (capped)."
+      ],
+      "cited": [
+        "https://crfm.stanford.edu/helm"
+      ],
+      "id": "q3",
+      "retrieved": [
+        {
+          "key": "BENCH:mmlu",
+          "score": 0.5
+        },
+        {
+          "key": "URL:https://crfm.stanford.edu/helm",
+          "score": 0.5
+        }
+      ],
+      "proof": []
+    }
+  ]
+}

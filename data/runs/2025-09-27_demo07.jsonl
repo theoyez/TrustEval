@@ -1,0 +1,3 @@
+{"id": "q1", "model": "demo8", "output": "The paper 'Attention is all you need' proposed Transformers.", "retrieved": [], "proof": []}
+{"id": "q2", "model": "demo8", "output": "Llama 3.1 has a large context (no exact number).", "retrieved": [{"key": "CARD:llama31", "score": 0.6}], "proof": []}
+{"id": "q3", "model": "demo8", "output": "A common benchmark is MMLU.", "retrieved": [{"key": "BENCH:mmlu", "score": 0.5}, {"key": "URL:https://crfm.stanford.edu/helm", "score": 0.5}], "proof": []}

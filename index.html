@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>theoyez.org — TrustEval</title>
+<link rel="stylesheet" href="web/styles.css?v=2_4_2">
+</head><body>
+<header class="dark">
+  <div class="brand"><a class="site" href="https://theoyez.org" target="_blank" rel="noopener">theoyez.org</a><span>—</span><span class="title">TrustEval</span></div>
+  <nav>
+    <a class="btn" href="web/how-it-works.html">How it works</a>
+    <a class="btn" href="web/compare.html">Compare</a>
+  </nav>
+</header>
+<div class="container">
+  <p class="lead">Transparent evaluation for AI systems. Scores are <b>Accuracy</b>, <b>Grounding</b>, <b>Safety</b>, and a <b>Trust</b> blend.</p>
+  <input id="filter" class="input" placeholder="Filter by run id, model, or notes…"/>
+  <table class="table zebra">
+    <thead><tr>
+      <th id="th-run" class="sortable" aria-sort="none"><span class="tip" data-tip="Run identifier">Run</span><span class="arrow">↕</span></th>
+      <th id="th-model" class="sortable" aria-sort="none"><span class="tip" data-tip="Model or system name">Model</span><span class="arrow">↕</span></th>
+      <th id="th-acc" class="sortable right" aria-sort="none"><span class="tip" data-tip="Partial-credit match vs expected (exact / token overlap / regex / edit)">Accuracy</span><span class="arrow">↕</span></th>
+      <th id="th-gnd" class="sortable right" aria-sort="none"><span class="tip" data-tip="Citations must be allowed (Per-Item → Domain). If the cited source isn’t in retrieved top-k, score is capped.">Grounding</span><span class="arrow">↕</span></th>
+      <th id="th-safe" class="sortable right" aria-sort="none"><span class="tip" data-tip="Regex packs for PII/Toxicity/Policy apply bounded deductions.">Safety</span><span class="arrow">↕</span></th>
+      <th id="th-trust" class="sortable right" aria-sort="none"><span class="tip" data-tip="0.6×Accuracy + 0.3×Grounding + 0.1×Safety">Trust</span><span class="arrow">↕</span></th>
+      <th><span class="tip" data-tip="Click the chevron to view a quick RAG audit: top-k retrieved, cited keys, and consistency.">Audit</span></th>
+      <th>Report</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+  <p class="footer">Updated: <span id="lastUpdated">—</span> · v2.4.2 · MIT</p>
+</div>
+<script src="web/leaderboard.js?v=2_4_2"></script>
+</body></html>
