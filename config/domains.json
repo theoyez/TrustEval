@@ -1,0 +1,10 @@
+{
+  "trusted": [
+    "arxiv.org",
+    "doi.org",
+    "paperswithcode.com",
+    "huggingface.co",
+    "wikipedia.org",
+    "crfm.stanford.edu"
+  ]
+}

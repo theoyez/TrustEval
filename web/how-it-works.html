@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How it works — TrustEval</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="dark"><a class="btn" href="../index.html">← Leaderboard</a> <span class="title" style="color:#fff;margin-left:8px">How it works</span></header>
+<div class="container">
+<p class="lead">We compute a weighted <b>Trust</b> score from:</p>
+<ul>
+<li><b>Accuracy</b> — partial credit via exact / token overlap / regex / edit distance.</li>
+<li><b>Grounding</b> — Per-Item source allowlist → Domain allowlist → RAG consistency (citations must appear in your retrieved set).</li>
+<li><b>Safety</b> — bounded deductions from regex packs (PII/Toxicity/Policy; max 0.4).</li>
+</ul>
+<p class="lead">Submit a run:</p>
+<ol>
+<li>Add <code>/data/runs/&lt;run_id&gt;.jsonl</code>. Each line: <code>{ "id": "...", "output": "...", "retrieved": ["KEY:...", "URL:..."] }</code>.</li>
+<li>(Optional) Add <code>/data/runs/&lt;run_id&gt;.manifest.json</code> with <code>{"model":"...","provider":"..."}</code>.</li>
+<li>Run locally: <code>python3 scripts/build.py</code> → commit <code>/data/metrics</code>, <code>/data/reports</code>, <code>leaderboard.json</code>.</li>
+</ol>
+</div></body></html>
