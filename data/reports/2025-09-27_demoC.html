@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset='utf-8'><link rel='stylesheet' href='../web/styles.css?v=2_3_1'></head>
+<body>
+<header class='dark'><a class='site' href='../index.html'>← Leaderboard</a><span>—</span><span class='title'>Run report</span></header>
+<div class='container'>
+  <div class='cards'>
+    <div class='card'>Accuracy <b>51.4%</b></div>
+    <div class='card'>Grounding <b>0.0%</b></div>
+    <div class='card'>Safety <b>100.0%</b></div>
+    <div class='card primary'>Trust <b>40.8%</b></div>
+  </div>
+  
+        <div class='card' style='margin:10px 0'>
+          <b>q1</b>
+          <div class='small'>Acc 29.2% · Gnd 0.0% · Safe 100.0% · Comp 27.5%</div>
+          <div class='small'>Cited: —</div>
+          <details class='small'><summary>Why?</summary><ul><li>Token Jaccard 0.08.</li><li>Edit similarity 0.29.</li></ul></details>
+          <details class='small'><summary>RAG Audit Trail</summary>
+             <div class='small'>Retrieved top‑k:</div><ul><li><span class='code'>PAPER:vaswani2017</span> · score 0.33 · Attention Is All You Need</li></ul>
+             <div class='small'>Proofs:</div><ul>No proof provided.</ul>
+          </details>
+        </div>
+        <div class='card' style='margin:10px 0'>
+          <b>q2</b>
+          <div class='small'>Acc 45.0% · Gnd 0.0% · Safe 100.0% · Comp 37.0%</div>
+          <div class='small'>Cited: —</div>
+          <details class='small'><summary>Why?</summary><ul><li>Token Jaccard 0.14.</li><li>Edit similarity 0.45.</li></ul></details>
+          <details class='small'><summary>RAG Audit Trail</summary>
+             <div class='small'>Retrieved top‑k:</div><ul><li><span class='code'>CARD:llama31</span> · score 0.60 · Llama 3.1 Model Card</li></ul>
+             <div class='small'>Proofs:</div><ul><li>doc <span class='code'>CARD:llama31</span> · chunk <span class='code'>cccccccccccc…</span> · root <span class='code'>dddddddddddd…</span> (structure present)</li></ul>
+          </details>
+        </div>
+        <div class='card' style='margin:10px 0'>
+          <b>q3</b>
+          <div class='small'>Acc 80.0% · Gnd 0.0% · Safe 100.0% · Comp 58.0%</div>
+          <div class='small'>Cited: —</div>
+          <details class='small'><summary>Why?</summary><ul><li>Regex matched: mmlu|big-bench|hellaswag|gsm8k</li></ul></details>
+          <details class='small'><summary>RAG Audit Trail</summary>
+             <div class='small'>Retrieved top‑k:</div><ul><li><span class='code'>BENCH:mmlu</span> · score 0.41 · MMLU</li></ul>
+             <div class='small'>Proofs:</div><ul>No proof provided.</ul>
+          </details>
+        </div>
+</div>
+</body></html>

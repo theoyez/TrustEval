@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compare — TrustEval</title>
+<link rel="stylesheet" href="styles.css?v=2_3_1">
+</head><body>
+<header class="dark"><div class="brand"><a class="site" href="../index.html">← Leaderboard</a><span>—</span><span class="title">Compare</span></div></header>
+<div class="container">
+  <p class="lead">Pick two runs. We’ll show side-by-side metrics and the deltas.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin:8px 0">
+    <select id="left" class="select" title="Left run"></select>
+    <select id="right" class="select" title="Right run"></select>
+    <button class="btn primary" id="open">Open both reports</button>
+  </div>
+  <div id="cmp"></div>
+</div>
+<script src="compare.js?v=2_3_1"></script>
+</body></html>

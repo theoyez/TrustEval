@@ -1,0 +1,89 @@
+{
+  "updated_at": "2025-09-28 01:55 UTC",
+  "runs": [
+    {
+      "run_id": "2025-09-27_demoA",
+      "model": "demoA",
+      "accuracy": 0.5153,
+      "grounding": 0.6667,
+      "safety": 1.0,
+      "trust_score": 0.6092,
+      "notes": "example demoA",
+      "report": "data/reports/2025-09-27_demoA.html",
+      "audit": {
+        "status": "ok",
+        "cited": [
+          "PAPER:vaswani2017",
+          "CARD:llama31",
+          "https://crfm.stanford.edu/helm"
+        ],
+        "topk": [
+          {
+            "key": "PAPER:vaswani2017"
+          },
+          {
+            "key": "CARD:llama31"
+          },
+          {
+            "key": "BENCH:mmlu"
+          }
+        ],
+        "consistency": "consistent"
+      }
+    },
+    {
+      "run_id": "2025-09-27_demoB",
+      "model": "demoB",
+      "accuracy": 0.3434,
+      "grounding": 0.1667,
+      "safety": 1.0,
+      "trust_score": 0.356,
+      "notes": "example demoB",
+      "report": "data/reports/2025-09-27_demoB.html",
+      "audit": {
+        "status": "warn",
+        "cited": [
+          "https://arxiv.org/abs/1706.03762"
+        ],
+        "topk": [
+          {
+            "key": "URL:https://arxiv.org/abs/1706.03762"
+          },
+          {
+            "key": "CARD:llama31"
+          },
+          {
+            "key": "URL:https://paperswithcode.com/dataset/mmlu"
+          }
+        ],
+        "consistency": "inconsistent"
+      }
+    },
+    {
+      "run_id": "2025-09-27_demoC",
+      "model": "demoC",
+      "accuracy": 0.5139,
+      "grounding": 0.0,
+      "safety": 1.0,
+      "trust_score": 0.4083,
+      "notes": "example demoC",
+      "report": "data/reports/2025-09-27_demoC.html",
+      "audit": {
+        "status": "\u2014",
+        "cited": [],
+        "topk": [
+          {
+            "key": "PAPER:vaswani2017"
+          },
+          {
+            "key": "CARD:llama31"
+          },
+          {
+            "key": "BENCH:mmlu"
+          }
+        ],
+        "consistency": "\u2014"
+      }
+    }
+  ]
+}
