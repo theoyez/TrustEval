@@ -1,0 +1,3 @@
+{"id": "q1", "model": "demoC", "output": "The Attention paper introduced Transformers (source: randomblog.example).", "retrieved": ["PAPER:vaswani2017"]}
+{"id": "q2", "model": "demoC", "output": "Context window is 32k tokens.", "retrieved": ["CARD:llama31"]}
+{"id": "q3", "model": "demoC", "output": "A common benchmark is MMLU.", "retrieved": []}
