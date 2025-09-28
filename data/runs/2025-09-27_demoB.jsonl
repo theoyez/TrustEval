@@ -1,0 +1,3 @@
+{"id": "q1", "model": "demoB", "output": "Transformers were introduced in 2017 (ref: https://arxiv.org/abs/1706.03762).", "retrieved": [{"key": "URL:https://arxiv.org/abs/1706.03762", "score": 0.63, "title": "arXiv link"}]}
+{"id": "q2", "model": "demoB", "output": "Llama 3.1 has a large context (no exact number).", "retrieved": [{"key": "CARD:llama31", "score": 0.4, "title": "Llama 3.1 Model Card"}]}
+{"id": "q3", "model": "demoB", "output": "Benchmarks include BIG-bench and GSM8K (see paperswithcode).", "retrieved": [{"key": "URL:https://paperswithcode.com/dataset/mmlu", "score": 0.55, "title": "PapersWithCode MMLU"}]}

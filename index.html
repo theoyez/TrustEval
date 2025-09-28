@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>theoyez.org — TrustEval</title>
+<link rel="stylesheet" href="web/styles.css">
+</head><body>
+<header class="dark">
+  <div class="brand">
+    <a class="site" href="https://theoyez.org" target="_blank" rel="noopener">theoyez.org</a>
+    <span class="divider">—</span><span class="title">TrustEval</span>
+  </div>
+  <nav>
+    <a class="btn" href="web/how-it-works.html">How it works</a>
+    <a class="btn" href="https://github.com/theoyez/TrustEval" target="_blank" rel="noopener">GitHub Repo</a>
+    <a class="btn primary" href="web/compare.html">Compare</a>
+  </nav>
+</header>
+<div class="container">
+  <p class="lead">Transparent evaluation for AI systems. Scores are <b>Accuracy</b>, <b>Grounding</b>, <b>Safety</b>, and a <b>Trust</b> blend.</p>
+  <input id="filter" class="input" placeholder="Filter by run id, model, or notes…"/>
+  <table class="table zebra">
+    <thead>
+      <tr>
+        <th id="th-run"   class="sortable" aria-sort="none">Run <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">Run identifier.</span></span></th>
+        <th id="th-model" class="sortable" aria-sort="none">Model <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">Model or system name.</span></span></th>
+        <th id="th-acc"   class="sortable right" aria-sort="none">Accuracy <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">Partial-credit match vs expected (exact / token overlap / regex / edit).</span></span></th>
+        <th id="th-gnd"   class="sortable right" aria-sort="none">Grounding <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">Citations must be allowed (Per-Item → Domain). If cited source isn’t in retrieved top‑k, score is capped.</span></span></th>
+        <th id="th-safe"  class="sortable right" aria-sort="none">Safety <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">Regex packs for PII/Toxicity/Policy apply bounded deductions.</span></span></th>
+        <th id="th-trust" class="sortable right" aria-sort="none">Trust <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">0.6×Accuracy + 0.3×Grounding + 0.1×Safety.</span></span></th>
+        <th>Audit <span class="tooltip"><span class="tip">?</span><span class="tooltiptext">Quick RAG audit: top‑k retrieved, cited keys, and consistency.</span></span></th>
+        <th>Report</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <p class="footer">Updated: <span id="lastUpdated">—</span> · v2.3.0 · MIT</p>
+</div>
+<script src="web/leaderboard.js"></script>
+</body></html>
