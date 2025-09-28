@@ -1,0 +1,3 @@
+{"key": "PAPER:vaswani2017", "title": "Attention Is All You Need", "url": "https://arxiv.org/abs/1706.03762", "text": "Transformer introduction."}
+{"key": "CARD:llama31", "title": "Llama 3.1 Model Card (summary)", "url": "https://ai.meta.com/llama/", "text": "Context windows up to 128k tokens."}
+{"key": "BENCH:mmlu", "title": "MMLU Benchmark (overview)", "url": "https://paperswithcode.com/dataset/mmlu", "text": "Multitask language understanding benchmark."}

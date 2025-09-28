@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>theoyez.org — TrustEval</title>
+<link rel="icon" href="web/favicon.svg"><link rel="stylesheet" href="web/styles.css">
+</head><body>
+<header class="dark" style="padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+  <div class="brand">
+    <a href="https://theoyez.org" target="_blank" rel="noopener"><img class="logo" src="web/oyez-logo.png" alt="theoyez.org logo"></a>
+    <span class="title">TrustEval</span>
+  </div>
+  <nav>
+    <a class="btn" href="web/how-it-works.html">How it works</a>
+    <a class="btn" href="https://github.com/theoyez/TrustEval" target="_blank" rel="noopener">GitHub Repo</a>
+    <a class="btn primary" href="data/reports/2025-09-27_demoA.html">View sample report</a>
+    <a class="btn primary" href="web/compare.html?left=2025-09-27_demoA&right=2025-09-27_demoB">Compare</a>
+  </nav>
+</header>
+<div class="container">
+  <p class="lead">Transparent evaluation for AI systems — <b>Accuracy</b>, <b>Grounding</b>, <b>Safety</b> → <b>Trust</b>.</p>
+  <div class="legend">
+    <span class="chip" title="Partial-credit match vs expected (exact / token overlap / regex / edit)">Accuracy</span>
+    <span class="chip" title="Citations allowed at Per-Item; else allowed by Domain; capped if not in RAG retrieval">Grounding</span>
+    <span class="chip" title="Regex packs for PII/Toxicity/Policy apply bounded deductions (max 0.4)">Safety</span>
+    <span class="chip" title="0.6×Accuracy + 0.3×Grounding + 0.1×Safety">Trust</span>
+  </div>
+  <input id="filter" class="input" placeholder="Filter by run id, model, or notes…"/>
+  <table class="table zebra" aria-describedby="legend">
+    <thead>
+      <tr>
+        <th id="th-run"   class="sortable" title="Run identifier" aria-sort="none">Run</th>
+        <th id="th-model" class="sortable" title="Model or system name" aria-sort="none">Model</th>
+        <th id="th-acc"   class="sortable right" title="Partial-credit accuracy" aria-sort="none">Accuracy</th>
+        <th id="th-gnd"   class="sortable right" title="Per-Item ▶ Domain ▶ RAG policy" aria-sort="none">Grounding</th>
+        <th id="th-safe"  class="sortable right" title="PII/Toxicity/Policy deductions (higher is safer)" aria-sort="none">Safety</th>
+        <th id="th-trust" class="sortable right" title="Weighted composite score" aria-sort="none">Trust</th>
+        <th title="Short description of the run">Notes</th>
+        <th title="Open per-run detail report">Report</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <p class="footer">Updated: <span id="lastUpdated">—</span> · v2.1.0 · MIT</p>
+</div>
+<script src="web/leaderboard.js"></script>
+</body></html>
