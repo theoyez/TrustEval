@@ -1,0 +1,20 @@
+<!doctype html><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel="stylesheet" href='../../config/theme.css'>
+<body style="background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<div style="max-width:1100px;margin:0 auto;padding:16px">
+  <a href='../../index.html' style="display:inline-block;border:1px solid var(--muted);padding:8px 12px;border-radius:10px;background:#141617;color:var(--ink)'>← Leaderboard</a>
+  <button onclick='window.print()' style="margin-left:8px;border:1px solid var(--muted);padding:8px 12px;border-radius:10px;background:#141617;color:var(--ink)'>Export PDF</button>
+  <h2 style="margin:10px 0">2025-09-28_core02</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><div style='border:1px solid var(--muted);border-radius:12px;background:var(--card);padding:12px'><b>Accuracy</b><div class='small'>46.0%</div></div><div style='border:1px solid var(--muted);border-radius:12px;background:var(--card);padding:12px'><b>Grounding</b><div class='small'>34.0%</div></div><div style='border:1px solid var(--muted);border-radius:12px;background:var(--card);padding:12px'><b>Safety</b><div class='small'>100.0%</div></div><div style='border:1px solid var(--muted);border-radius:12px;background:var(--card);padding:12px'><b>Trust</b><div class='small'><b>47.8%</b></div></div></div>
+  <div style="border:1px solid var(--muted);border-radius:12px;background:var(--card);padding:12px;margin-top:12px">
+    <div id="chev" style="cursor:pointer">▸ <span style="border:1px solid var(--muted);padding:2px 8px;border-radius:999px">Audit trail & proof path</span></div>
+    <div id="box" style="display:none;margin-top:8px">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div class="card"><b>Retrieval candidates</b><ul class="small"><li><code>PAPER:vaswani2017</code> · chunk <b>12</b> · score 0.81</li><li><code>CARD:llama31</code> · chunk <b>8</b> · score 0.61</li></ul></div>
+        <div class="card"><b>Citations used</b><ul class="small"><li><code>PAPER:vaswani2017</code></li><li><code>CARD:llama31</code></li></ul></div>
+        <div class="card"><b>Proof path</b><p class="small">retrieved → ranked → cited (IDs match); Tier 3 adds chunk_hash & Merkle root</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>const c=document.getElementById('chev'), b=document.getElementById('box'); c.addEventListener('click',()=>{const o=b.style.display!=='block'; b.style.display=o?'block':'none'; c.firstChild.textContent=o?'▾':'▸';});</script>

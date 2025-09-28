@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrustEval Run Metrics",
+  "type": "object",
+  "required": [
+    "run_id",
+    "summary"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "dataset": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "accuracy": {
+          "type": "number"
+        },
+        "grounding": {
+          "type": "number"
+        },
+        "safety": {
+          "type": "number"
+        },
+        "robustness": {
+          "type": "number"
+        },
+        "bias": {
+          "type": "number"
+        },
+        "calibration": {
+          "type": "number"
+        },
+        "trust_score": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "items": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}
